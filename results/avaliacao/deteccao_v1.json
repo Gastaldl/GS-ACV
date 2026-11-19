@@ -1,0 +1,175 @@
+{
+  "pesos": "models/luzsegura_yolo26n_v1.pt",
+  "sha256_pesos": "2d0bcbcc94e6dce47b99684140bbc2c3378b64cb7a9da291612285e30873a071",
+  "dados_treino": "data/dataset/luzsegura.yaml",
+  "conf_operacao": 0.3,
+  "todos": {
+    "imagens": 524,
+    "instancias": {
+      "luminaria_acesa": 1059,
+      "luminaria_apagada": 497
+    },
+    "precisao": 0.5705,
+    "revocacao": 0.4341,
+    "limiar_f1": 0.245,
+    "precisao_op": 0.6149,
+    "revocacao_op": 0.4023,
+    "mAP50": 0.441,
+    "mAP50_95": 0.2157,
+    "por_classe": {
+      "luminaria_acesa": {
+        "instancias": 1059,
+        "precisao": 0.5669,
+        "revocacao": 0.4618,
+        "deteccoes_op": 742,
+        "acertos_op": 458,
+        "precisao_op": 0.6173,
+        "revocacao_op": 0.4325,
+        "mAP50": 0.4631,
+        "mAP50_95": 0.2047
+      },
+      "luminaria_apagada": {
+        "instancias": 497,
+        "precisao": 0.574,
+        "revocacao": 0.4064,
+        "deteccoes_op": 302,
+        "acertos_op": 185,
+        "precisao_op": 0.6126,
+        "revocacao_op": 0.3722,
+        "mAP50": 0.4189,
+        "mAP50_95": 0.2266
+      }
+    },
+    "tempo_ms_por_imagem": {
+      "preprocess": 1.9,
+      "inference": 21.9,
+      "loss": 0.0,
+      "postprocess": 0.7
+    }
+  },
+  "noite": {
+    "imagens": 280,
+    "instancias": {
+      "luminaria_acesa": 769,
+      "luminaria_apagada": 22
+    },
+    "precisao": 0.5109,
+    "revocacao": 0.3419,
+    "limiar_f1": 0.287,
+    "precisao_op": 0.5305,
+    "revocacao_op": 0.3399,
+    "mAP50": 0.3695,
+    "mAP50_95": 0.1644,
+    "por_classe": {
+      "luminaria_acesa": {
+        "instancias": 769,
+        "precisao": 0.6221,
+        "revocacao": 0.4564,
+        "deteccoes_op": 540,
+        "acertos_op": 348,
+        "precisao_op": 0.6444,
+        "revocacao_op": 0.4525,
+        "mAP50": 0.4805,
+        "mAP50_95": 0.2076
+      },
+      "luminaria_apagada": {
+        "instancias": 22,
+        "precisao": 0.3998,
+        "revocacao": 0.2273,
+        "deteccoes_op": 12,
+        "acertos_op": 5,
+        "precisao_op": 0.4167,
+        "revocacao_op": 0.2273,
+        "mAP50": 0.2586,
+        "mAP50_95": 0.1212
+      }
+    },
+    "tempo_ms_por_imagem": {
+      "preprocess": 1.9,
+      "inference": 22.1,
+      "loss": 0.0,
+      "postprocess": 0.6
+    }
+  },
+  "anoitecer": {
+    "imagens": 165,
+    "instancias": {
+      "luminaria_acesa": 290,
+      "luminaria_apagada": 220
+    },
+    "precisao": 0.5348,
+    "revocacao": 0.3915,
+    "limiar_f1": 0.228,
+    "precisao_op": 0.6077,
+    "revocacao_op": 0.3476,
+    "mAP50": 0.3947,
+    "mAP50_95": 0.1843,
+    "por_classe": {
+      "luminaria_acesa": {
+        "instancias": 290,
+        "precisao": 0.5269,
+        "revocacao": 0.4103,
+        "deteccoes_op": 184,
+        "acertos_op": 108,
+        "precisao_op": 0.587,
+        "revocacao_op": 0.3724,
+        "mAP50": 0.4349,
+        "mAP50_95": 0.2103
+      },
+      "luminaria_apagada": {
+        "instancias": 220,
+        "precisao": 0.5426,
+        "revocacao": 0.3727,
+        "deteccoes_op": 113,
+        "acertos_op": 71,
+        "precisao_op": 0.6283,
+        "revocacao_op": 0.3227,
+        "mAP50": 0.3545,
+        "mAP50_95": 0.1583
+      }
+    },
+    "tempo_ms_por_imagem": {
+      "preprocess": 1.5,
+      "inference": 22.7,
+      "loss": 0.0,
+      "postprocess": 0.7
+    }
+  },
+  "dia": {
+    "imagens": 79,
+    "instancias": {
+      "luminaria_acesa": 0,
+      "luminaria_apagada": 255
+    },
+    "precisao": 0.5915,
+    "revocacao": 0.4706,
+    "limiar_f1": 0.256,
+    "precisao_op": 0.6236,
+    "revocacao_op": 0.4353,
+    "mAP50": 0.4979,
+    "mAP50_95": 0.3061,
+    "por_classe": {
+      "luminaria_apagada": {
+        "instancias": 255,
+        "precisao": 0.5915,
+        "revocacao": 0.4706,
+        "deteccoes_op": 178,
+        "acertos_op": 111,
+        "precisao_op": 0.6236,
+        "revocacao_op": 0.4353,
+        "mAP50": 0.4979,
+        "mAP50_95": 0.3061
+      }
+    },
+    "tempo_ms_por_imagem": {
+      "preprocess": 1.1,
+      "inference": 23.3,
+      "loss": 0.0,
+      "postprocess": 0.8
+    },
+    "falsos_positivos_sem_gabarito_op": {
+      "luminaria_acesa": 10,
+      "imagens_afetadas": 7
+    }
+  }
+}

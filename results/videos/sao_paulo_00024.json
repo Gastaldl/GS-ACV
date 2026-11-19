@@ -1,0 +1,29 @@
+{
+  "origem": "data/raw/videos/sao_paulo_00024.mp4",
+  "inicio_s": 7.0,
+  "quadros_processados": 1542,
+  "duracao_s": 51.5,
+  "fps_video": 29.97,
+  "fps_processamento_medio": 19.8,
+  "luminarias_unicas": {
+    "luminaria_acesa": 10,
+    "luminaria_apagada": 0
+  },
+  "luminarias_apagadas": [],
+  "requer_revisao_humana": false,
+  "fracao_quadros_por_diagnostico": {
+    "trecho_escuro": 0.949,
+    "iluminacao_insuficiente": 0.047,
+    "iluminacao_adequada": 0.004
+  },
+  "segundos_em_trecho_escuro": 48.8,
+  "video_anotado": "data/outputs/videos/sao_paulo_00024_anotado.mp4",
+  "fonte": {
+    "autor": "Ace of Spades / publicvideos.org",
+    "licenca": "Domínio público (CC0)",
+    "local": "São Paulo, SP, Brasil",
+    "pagina": "https://archive.org/details/sampa_night"
+  },
+  "pesos": "models/luzsegura_yolo26n.pt",
+  "sha256": "2d0bcbcc94e6dce47b99684140bbc2c3378b64cb7a9da291612285e30873a071"
+}

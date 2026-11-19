@@ -1,0 +1,109 @@
+{
+  "pesos": "models/luzsegura_yolo26n_v1.pt",
+  "sha256_pesos": "2d0bcbcc94e6dce47b99684140bbc2c3378b64cb7a9da291612285e30873a071",
+  "dados_treino": "data/dataset/luzsegura.yaml",
+  "chennai": {
+    "imagens": 816,
+    "com_defeito": 289,
+    "modelo": {
+      "vp": 62,
+      "fn": 227,
+      "fp": 9,
+      "vn": 518,
+      "precisao": 0.8732,
+      "revocacao": 0.2145,
+      "f1": 0.3444,
+      "acuracia": 0.7108
+    },
+    "brilho": {
+      "vp": 25,
+      "fn": 264,
+      "fp": 4,
+      "vn": 523,
+      "precisao": 0.8621,
+      "revocacao": 0.0865,
+      "f1": 0.1572,
+      "acuracia": 0.6716
+    },
+    "sistema": {
+      "vp": 62,
+      "fn": 227,
+      "fp": 9,
+      "vn": 518,
+      "precisao": 0.8732,
+      "revocacao": 0.2145,
+      "f1": 0.3444,
+      "acuracia": 0.7108
+    },
+    "chamado_automatico": {
+      "vp": 8,
+      "fn": 281,
+      "fp": 0,
+      "vn": 527,
+      "precisao": 1.0,
+      "revocacao": 0.0277,
+      "f1": 0.0539,
+      "acuracia": 0.6556
+    },
+    "diagnosticos": {
+      "iluminacao_adequada": 610,
+      "iluminacao_insuficiente": 76,
+      "luminaria_apagada": 71,
+      "trecho_escuro": 59
+    },
+    "diagnosticos_por_rotulo": {
+      "funcionando": {
+        "iluminacao_adequada": 393,
+        "iluminacao_insuficiente": 73,
+        "trecho_escuro": 52,
+        "luminaria_apagada": 9
+      },
+      "com_defeito": {
+        "iluminacao_adequada": 217,
+        "luminaria_apagada": 62,
+        "trecho_escuro": 7,
+        "iluminacao_insuficiente": 3
+      }
+    },
+    "falso_alarme_piso_funcionando": 0.2372
+  },
+  "sf311_noite": {
+    "imagens": 398,
+    "periodo": {
+      "noite": 382,
+      "transicao": 9,
+      "dia": 7
+    },
+    "acusou_falha_modelo": 0.1181,
+    "acusou_falha_brilho": 0.0201,
+    "acusou_falha_sistema": 0.1055,
+    "chamado_automatico": 0.0,
+    "detectou_alguma_luminaria": 0.5477,
+    "diagnosticos": {
+      "iluminacao_adequada": 323,
+      "luminaria_apagada": 42,
+      "trecho_escuro": 15,
+      "iluminacao_insuficiente": 11,
+      "fora_do_periodo_noturno": 5,
+      "acesa_durante_o_dia": 2
+    }
+  },
+  "sf311_dia": {
+    "imagens": 60,
+    "periodo": {
+      "noite": 0,
+      "transicao": 0,
+      "dia": 60
+    },
+    "acusou_falha_modelo": 0.4833,
+    "acusou_falha_brilho": 0.0,
+    "acusou_falha_sistema": 0.0,
+    "chamado_automatico": 0.0,
+    "detectou_alguma_luminaria": 0.5167,
+    "diagnosticos": {
+      "fora_do_periodo_noturno": 57,
+      "acesa_durante_o_dia": 3
+    },
+    "acusou_acesa_de_dia": 0.05
+  }
+}

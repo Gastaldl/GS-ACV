@@ -1,0 +1,71 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "dia",
+  "periodo_fonte": "posicao_do_sol",
+  "altura_do_sol_graus": 64.8,
+  "diagnostico": "fora_do_periodo_noturno",
+  "severidade": "nenhuma",
+  "requer_revisao_humana": false,
+  "acao_sugerida": "Foto diurna: envie uma foto depois do pôr do sol para avaliar a iluminação.",
+  "explicacao": "Encontrei 2 luminárias apagadas (confiança até 34%). Período: dia (Sol a +65° do horizonte no horário da captura). Resultado: fora do período noturno. Foto diurna: envie uma foto depois do pôr do sol para avaliar a iluminação.",
+  "contagem": {
+    "luminaria_acesa": 0,
+    "luminaria_apagada": 2
+  },
+  "luminosidade": {
+    "cena_media": 133.0,
+    "piso_media": 126.7,
+    "fracao_escura": 0.0024,
+    "fracao_saturada": 0.0004
+  },
+  "luminarias": [
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.344,
+      "caixa_norm": [
+        0.0,
+        0.0158,
+        0.6226,
+        0.4366
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": false,
+      "maior_ponto_de_luz_px": 51,
+      "contraste_com_entorno": 1.21,
+      "id_rastreio": null
+    },
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.313,
+      "caixa_norm": [
+        0.0,
+        0.0667,
+        0.6221,
+        0.9807
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": false,
+      "maior_ponto_de_luz_px": 51,
+      "contraste_com_entorno": 1.19,
+      "id_rastreio": null
+    }
+  ],
+  "privacidade": {
+    "pessoas_desfocadas": 0,
+    "veiculos_desfocados": 0,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 864,
+    "altura": 1152
+  },
+  "tempo_processamento_ms": 83.2,
+  "localizacao": {
+    "lat": 37.80044168074641,
+    "lon": -122.4326908699117
+  },
+  "capturado_em": "2025-08-18T12:58:09-07:00"
+}

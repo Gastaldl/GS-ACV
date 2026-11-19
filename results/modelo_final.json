@@ -1,0 +1,21 @@
+{
+  "versao": "v1",
+  "pesos": "models/luzsegura_yolo26n_v1.pt",
+  "sha256": "2d0bcbcc94e6dce47b99684140bbc2c3378b64cb7a9da291612285e30873a071",
+  "regra": "Regra fixada antes de avaliar o v2: o v2 substitui o v1 só se (1) a média entre o F1 do sistema em Chennai e a fração de chamados noturnos do SF 311 em que o sistema acusou a falha for estritamente maior que a do v1 e (2) o mAP50 no teste do Open Images não cair mais de 0,03 em relação ao v1. Em qualquer outro caso, inclusive sem resultados do v2, ficam os pesos do v1.",
+  "comparacao": {
+    "v1": {
+      "chennai_f1_sistema": 0.3444,
+      "chennai_precisao_sistema": 0.8732,
+      "chennai_revocacao_sistema": 0.2145,
+      "sf311_noite_acusou_falha_sistema": 0.1055,
+      "sf311_noite_chamado_automatico": 0.0,
+      "sf311_dia_acusou_acesa_de_dia": 0.05,
+      "oi_teste_map50": 0.441,
+      "oi_teste_map50_95": 0.2157,
+      "oi_noite_map50": 0.3695
+    },
+    "v2": null
+  },
+  "treino_v2": null
+}

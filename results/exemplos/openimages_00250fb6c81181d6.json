@@ -1,0 +1,53 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "noite",
+  "periodo_fonte": "informado",
+  "altura_do_sol_graus": null,
+  "diagnostico": "iluminacao_insuficiente",
+  "severidade": "media",
+  "requer_revisao_humana": true,
+  "acao_sugerida": "Enviar para revisão humana; se confirmado, vistoriar o trecho: luminária acesa, mas o chão continua escuro (árvore, distância entre postes ou potência baixa).",
+  "explicacao": "Encontrei 1 luminária acesa. Período: noite (informado). Brilho do chão: 27 de 255, abaixo do mínimo de 40 usado pelo sistema. Atenção: o brilho do chão é medido na faixa inferior da foto (40%); se a foto foi tirada apontando para cima, essa faixa pode mostrar céu, fachada ou o próprio poste. Resultado: iluminação insuficiente (prioridade média). Enviar para revisão humana; se confirmado, vistoriar o trecho: luminária acesa, mas o chão continua escuro (árvore, distância entre postes ou potência baixa).",
+  "contagem": {
+    "luminaria_acesa": 1,
+    "luminaria_apagada": 0
+  },
+  "luminosidade": {
+    "cena_media": 45.0,
+    "piso_media": 27.2,
+    "fracao_escura": 0.5319,
+    "fracao_saturada": 0.0123
+  },
+  "luminarias": [
+    {
+      "classe": "luminaria_acesa",
+      "confianca": 0.44,
+      "caixa_norm": [
+        0.0859,
+        0.3191,
+        0.1181,
+        0.4529
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 441,
+      "contraste_com_entorno": 1.79,
+      "id_rastreio": null
+    }
+  ],
+  "privacidade": {
+    "pessoas_desfocadas": 0,
+    "veiculos_desfocados": 0,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 1024,
+    "altura": 768
+  },
+  "tempo_processamento_ms": 71.6,
+  "localizacao": null,
+  "capturado_em": null
+}

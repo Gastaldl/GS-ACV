@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luzsegura"
+version = "1.0.0"
+description = "Luz Segura: visão computacional que detecta luminárias públicas acesas e apagadas e trechos escuros em fotos e vídeos noturnos"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Arthur Bessa Pian" },
+  { name = "Davi Almeida Desenzi" },
+  { name = "Fabrício Gutierrez Saavedra" },
+  { name = "João Victor Soares" },
+  { name = "Márcio Gastaldi de Oliveira Soares" },
+]
+
+[project.scripts]
+luzsegura = "luzsegura.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+luzsegura = ["*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

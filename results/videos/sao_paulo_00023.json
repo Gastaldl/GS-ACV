@@ -1,0 +1,61 @@
+{
+  "origem": "data/raw/videos/sao_paulo_00023.mp4",
+  "inicio_s": 7.0,
+  "quadros_processados": 1047,
+  "duracao_s": 34.9,
+  "fps_video": 29.97,
+  "fps_processamento_medio": 17.8,
+  "luminarias_unicas": {
+    "luminaria_acesa": 23,
+    "luminaria_apagada": 2
+  },
+  "luminarias_apagadas": [
+    {
+      "id_rastreio": 104,
+      "aparece_em_s": 34.6,
+      "confianca_max": 0.519,
+      "quadros": 3,
+      "quadros_apagada": 2,
+      "quadros_por_brilho": {
+        "acesa": 0,
+        "apagada": 2
+      },
+      "requer_revisao_humana": true,
+      "motivos_revisao": [
+        "confianca_baixa"
+      ]
+    },
+    {
+      "id_rastreio": 105,
+      "aparece_em_s": 34.8,
+      "confianca_max": 0.429,
+      "quadros": 3,
+      "quadros_apagada": 3,
+      "quadros_por_brilho": {
+        "acesa": 0,
+        "apagada": 0
+      },
+      "requer_revisao_humana": true,
+      "motivos_revisao": [
+        "brilho_nao_confirma",
+        "confianca_baixa"
+      ]
+    }
+  ],
+  "requer_revisao_humana": true,
+  "fracao_quadros_por_diagnostico": {
+    "iluminacao_insuficiente": 0.749,
+    "trecho_escuro": 0.247,
+    "luminaria_apagada": 0.004
+  },
+  "segundos_em_trecho_escuro": 8.6,
+  "video_anotado": "data/outputs/videos/sao_paulo_00023_anotado.mp4",
+  "fonte": {
+    "autor": "Ace of Spades / publicvideos.org",
+    "licenca": "Domínio público (CC0)",
+    "local": "São Paulo, SP, Brasil",
+    "pagina": "https://archive.org/details/sampa_night"
+  },
+  "pesos": "models/luzsegura_yolo26n.pt",
+  "sha256": "2d0bcbcc94e6dce47b99684140bbc2c3378b64cb7a9da291612285e30873a071"
+}

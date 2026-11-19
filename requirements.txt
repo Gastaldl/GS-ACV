@@ -1,0 +1,25 @@
+# Luz Segura · visão computacional (testado em Python 3.12.10, Windows 11, CPU)
+# CPU em Linux: instale o torch antes com
+#   pip install torch==2.15.0 torchvision==0.29.2 --index-url https://download.pytorch.org/whl/cpu
+ultralytics==8.4.215
+lap==0.5.14  # rastreamento ByteTrack (o Ultralytics instalaria em tempo de execução)
+torch==2.15.0
+torchvision==0.29.2
+opencv-python==5.1.0.95
+numpy==2.5.5
+pillow==13.0.0
+requests==2.34.2
+tzdata==2026.6
+imageio-ffmpeg==0.8.1
+onnx==1.23.2
+onnxruntime==1.32.0
+onnxslim==0.1.99
+fastapi==0.163.2
+starlette==1.10.0  # api.py usa o MultiPartParser e o limite de corpo direto no Starlette
+anyio==4.16.0  # análise fora do laço de eventos, uma por vez
+uvicorn==0.54.0
+python-multipart==0.0.34
+pydantic==2.14.3
+gradio==6.32.0
+pytest==9.2.0
+httpx==0.28.1

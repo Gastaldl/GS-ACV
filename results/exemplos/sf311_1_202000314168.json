@@ -1,0 +1,101 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "noite",
+  "periodo_fonte": "posicao_do_sol",
+  "altura_do_sol_graus": -45.3,
+  "diagnostico": "luminaria_apagada",
+  "severidade": "media",
+  "requer_revisao_humana": true,
+  "acao_sugerida": "Enviar para revisão humana; se confirmado, abrir chamado de manutenção para a luminária apagada.",
+  "explicacao": "Encontrei 4 luminárias apagadas (confiança até 79%). Período: noite (Sol a -45° do horizonte no horário da captura). Brilho do chão: 71 de 255, acima do mínimo de 40 usado pelo sistema. A medição de brilho confirma 3 luminárias apagadas (nenhum ponto de luz na área). Atenção: o brilho medido contradiz o modelo em 1 luminária; um técnico deve revisar. Resultado: luminária apagada (prioridade média). Enviar para revisão humana; se confirmado, abrir chamado de manutenção para a luminária apagada.",
+  "contagem": {
+    "luminaria_acesa": 0,
+    "luminaria_apagada": 4
+  },
+  "luminosidade": {
+    "cena_media": 82.3,
+    "piso_media": 70.9,
+    "fracao_escura": 0.2795,
+    "fracao_saturada": 0.001
+  },
+  "luminarias": [
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.786,
+      "caixa_norm": [
+        0.4274,
+        0.3874,
+        0.4776,
+        0.6003
+      ],
+      "estado_por_brilho": "apagada",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 0,
+      "contraste_com_entorno": 0.68,
+      "id_rastreio": null
+    },
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.599,
+      "caixa_norm": [
+        0.5745,
+        0.4016,
+        0.6181,
+        0.6441
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": false,
+      "maior_ponto_de_luz_px": 12,
+      "contraste_com_entorno": 0.71,
+      "id_rastreio": null
+    },
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.56,
+      "caixa_norm": [
+        0.5486,
+        0.4262,
+        0.576,
+        0.5291
+      ],
+      "estado_por_brilho": "apagada",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 0,
+      "contraste_com_entorno": 0.76,
+      "id_rastreio": null
+    },
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.412,
+      "caixa_norm": [
+        0.3599,
+        0.5327,
+        0.3834,
+        0.6621
+      ],
+      "estado_por_brilho": "apagada",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 0,
+      "contraste_com_entorno": 1.03,
+      "id_rastreio": null
+    }
+  ],
+  "privacidade": {
+    "pessoas_desfocadas": 0,
+    "veiculos_desfocados": 1,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 1152,
+    "altura": 864
+  },
+  "tempo_processamento_ms": 2172.4,
+  "localizacao": {
+    "lat": 37.73798903359066,
+    "lon": -122.381500294101
+  },
+  "capturado_em": "2026-11-15T20:47:26-08:00"
+}

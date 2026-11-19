@@ -1,0 +1,53 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "noite",
+  "periodo_fonte": "informado",
+  "altura_do_sol_graus": null,
+  "diagnostico": "iluminacao_adequada",
+  "severidade": "nenhuma",
+  "requer_revisao_humana": false,
+  "acao_sugerida": "Nenhuma ação necessária.",
+  "explicacao": "Encontrei 1 luminária acesa. Período: noite (informado). Brilho do chão: 49 de 255, acima do mínimo de 40 usado pelo sistema. Resultado: iluminação adequada. Nenhuma ação necessária.",
+  "contagem": {
+    "luminaria_acesa": 1,
+    "luminaria_apagada": 0
+  },
+  "luminosidade": {
+    "cena_media": 50.2,
+    "piso_media": 48.7,
+    "fracao_escura": 0.5799,
+    "fracao_saturada": 0.0302
+  },
+  "luminarias": [
+    {
+      "classe": "luminaria_acesa",
+      "confianca": 0.368,
+      "caixa_norm": [
+        0.7604,
+        0.4464,
+        0.7888,
+        0.6825
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 67,
+      "contraste_com_entorno": 1.37,
+      "id_rastreio": null
+    }
+  ],
+  "privacidade": {
+    "pessoas_desfocadas": 5,
+    "veiculos_desfocados": 7,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 1024,
+    "altura": 768
+  },
+  "tempo_processamento_ms": 66.3,
+  "localizacao": null,
+  "capturado_em": null
+}

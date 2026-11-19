@@ -1,0 +1,71 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "noite",
+  "periodo_fonte": "posicao_do_sol",
+  "altura_do_sol_graus": -13.3,
+  "diagnostico": "luminaria_apagada",
+  "severidade": "media",
+  "requer_revisao_humana": true,
+  "acao_sugerida": "Enviar para revisão humana; se confirmado, abrir chamado de manutenção para a luminária apagada.",
+  "explicacao": "Encontrei 1 luminária acesa e 1 apagada (confiança até 43%). Período: noite (Sol a -13° do horizonte no horário da captura). Brilho do chão: 136 de 255, acima do mínimo de 40 usado pelo sistema. Atenção: o brilho medido contradiz o modelo em 1 luminária; um técnico deve revisar. Atenção: confiança do modelo abaixo de 55%. Resultado: luminária apagada (prioridade média). Enviar para revisão humana; se confirmado, abrir chamado de manutenção para a luminária apagada.",
+  "contagem": {
+    "luminaria_acesa": 1,
+    "luminaria_apagada": 1
+  },
+  "luminosidade": {
+    "cena_media": 95.7,
+    "piso_media": 135.8,
+    "fracao_escura": 0.0622,
+    "fracao_saturada": 0.0103
+  },
+  "luminarias": [
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.425,
+      "caixa_norm": [
+        0.6082,
+        0.9036,
+        0.7007,
+        1.0
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": false,
+      "maior_ponto_de_luz_px": 219,
+      "contraste_com_entorno": 1.1,
+      "id_rastreio": null
+    },
+    {
+      "classe": "luminaria_acesa",
+      "confianca": 0.363,
+      "caixa_norm": [
+        0.225,
+        0.6264,
+        0.3567,
+        1.0
+      ],
+      "estado_por_brilho": "acesa",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 2617,
+      "contraste_com_entorno": 1.11,
+      "id_rastreio": null
+    }
+  ],
+  "privacidade": {
+    "pessoas_desfocadas": 0,
+    "veiculos_desfocados": 0,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 864,
+    "altura": 1152
+  },
+  "tempo_processamento_ms": 75.6,
+  "localizacao": {
+    "lat": 37.75954043568175,
+    "lon": -122.43479926139115
+  },
+  "capturado_em": "2026-03-11T20:16:29-07:00"
+}

@@ -1,0 +1,16 @@
+{
+  "cpu": "AMD64 Family 25 Model 33 Stepping 2, AuthenticAMD",
+  "threads": 8,
+  "threads_pytorch_com_onnx": 2,
+  "video": "sao_paulo_00023.mp4",
+  "inicio_s": 7.0,
+  "quadros": 120,
+  "resolucao": "1280x720",
+  "imgsz": 640,
+  "fps": {
+    "detector_pytorch": 35.0,
+    "detector_onnx": 45.8,
+    "pipeline_pytorch_com_privacidade": 15.8,
+    "pipeline_onnx_com_privacidade": 13.4
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "noite",
+  "periodo_fonte": "posicao_do_sol",
+  "altura_do_sol_graus": -63.1,
+  "diagnostico": "iluminacao_adequada",
+  "severidade": "nenhuma",
+  "requer_revisao_humana": true,
+  "acao_sugerida": "Enviar para revisão humana antes de encerrar o relato.",
+  "explicacao": "Não encontrei luminárias na imagem. Período: noite (Sol a -63° do horizonte no horário da captura). Brilho do chão: 89 de 255, acima do mínimo de 40 usado pelo sistema. Atenção: nenhuma luminária foi encontrada na foto: o resultado vem só do brilho do chão. Resultado: iluminação adequada. Enviar para revisão humana antes de encerrar o relato.",
+  "contagem": {
+    "luminaria_acesa": 0,
+    "luminaria_apagada": 0
+  },
+  "luminosidade": {
+    "cena_media": 42.8,
+    "piso_media": 89.3,
+    "fracao_escura": 0.5882,
+    "fracao_saturada": 0.0004
+  },
+  "luminarias": [],
+  "privacidade": {
+    "pessoas_desfocadas": 0,
+    "veiculos_desfocados": 0,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 960,
+    "altura": 1280
+  },
+  "tempo_processamento_ms": 90.3,
+  "localizacao": {
+    "lat": 37.79694881716269,
+    "lon": -122.43368208605489
+  },
+  "capturado_em": "2026-11-16T22:26:11-08:00"
+}

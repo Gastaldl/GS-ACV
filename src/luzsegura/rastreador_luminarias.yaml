@@ -1,0 +1,10 @@
+# ByteTrack ajustado para luminárias (base: ultralytics/cfg/trackers/bytetrack.yaml, Ultralytics 8.4.215).
+# Luminária não se move: a trilha pode ficar viva por mais tempo sem detecção (o detector "pisca" em
+# luminárias pequenas) e ser retomada quando ela reaparece, em vez de virar uma luminária "nova".
+tracker_type: bytetrack
+track_high_thresh: 0.25 # primeira etapa de associação
+track_low_thresh: 0.1 # segunda etapa, com as detecções fracas (mantêm a trilha entre quadros)
+new_track_thresh: 0.30 # trilha nova só com a confiança mínima do diagnóstico (Limiares.conf_minima)
+track_buffer: 90 # quadros (3 s a 30 quadros/s) que uma trilha perdida espera antes de ser descartada
+match_thresh: 0.8 # custo máximo de associação (1 - IoU)
+fuse_score: True # combina a confiança com o IoU na associação

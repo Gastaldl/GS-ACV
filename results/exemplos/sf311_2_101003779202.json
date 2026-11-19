@@ -1,0 +1,56 @@
+{
+  "versao_contrato": "1.0",
+  "modelo": "luzsegura-yolo26n",
+  "origem": "foto",
+  "periodo": "noite",
+  "periodo_fonte": "posicao_do_sol",
+  "altura_do_sol_graus": -20.5,
+  "diagnostico": "luminaria_apagada",
+  "severidade": "media",
+  "requer_revisao_humana": true,
+  "acao_sugerida": "Enviar para revisão humana; se confirmado, abrir chamado de manutenção para a luminária apagada.",
+  "explicacao": "Encontrei 1 luminária apagada (confiança até 36%). Período: noite (Sol a -20° do horizonte no horário da captura). Brilho do chão: 134 de 255, acima do mínimo de 40 usado pelo sistema. A medição de brilho confirma 1 luminária apagada (nenhum ponto de luz na área). Atenção: confiança do modelo abaixo de 55%. Resultado: luminária apagada (prioridade média). Enviar para revisão humana; se confirmado, abrir chamado de manutenção para a luminária apagada.",
+  "contagem": {
+    "luminaria_acesa": 0,
+    "luminaria_apagada": 1
+  },
+  "luminosidade": {
+    "cena_media": 107.4,
+    "piso_media": 133.9,
+    "fracao_escura": 0.03,
+    "fracao_saturada": 0.0018
+  },
+  "luminarias": [
+    {
+      "classe": "luminaria_apagada",
+      "confianca": 0.356,
+      "caixa_norm": [
+        0.4432,
+        0.2974,
+        0.4804,
+        0.5437
+      ],
+      "estado_por_brilho": "apagada",
+      "concorda_com_modelo": true,
+      "maior_ponto_de_luz_px": 0,
+      "contraste_com_entorno": 0.87,
+      "id_rastreio": null
+    }
+  ],
+  "privacidade": {
+    "pessoas_desfocadas": 0,
+    "veiculos_desfocados": 0,
+    "imagem_armazenada": false,
+    "filtro_ativo": true
+  },
+  "imagem": {
+    "largura": 864,
+    "altura": 1152
+  },
+  "tempo_processamento_ms": 98.2,
+  "localizacao": {
+    "lat": 37.77813536821747,
+    "lon": -122.44683348793458
+  },
+  "capturado_em": "2026-03-30T21:14:09-07:00"
+}

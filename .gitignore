@@ -1,0 +1,33 @@
+# Ambiente
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Tudo em data/ fica fora do git: fotos brutas, intermediários e datasets montados (data/dataset,
+# data/dataset_v2), reproduzíveis pelos scripts; várias fontes não permitem redistribuição.
+# Só os manifestos são versionados.
+data/*
+!data/manifests/
+
+# Datasets baixados automaticamente pelo Ultralytics (ex.: coco128)
+datasets/
+
+# Execuções e pesos baixados automaticamente pelo Ultralytics
+runs/
+logs/
+yolo26n.pt
+yolov8*-world*.pt
+*.part
+
+# Mosaicos do Ultralytics (fotos de treino sem anonimização), argumentos com caminhos locais
+# e mosaicos de conferência (scripts/dados/mosaico_amostras.py)
+results/**/*batch*.jpg
+results/**/args.yaml
+results/qa/
+
+# Vídeos gerados em docs/video: só o vídeo de demonstração final é versionado
+docs/video/*.mp4
+!docs/video/luz_segura_demo.mp4
