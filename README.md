@@ -9,8 +9,7 @@ CitizenTech, Engenharia de Software 4º ano (4ES). Professores: Arnaldo Viana e 
 
 - **Relatório técnico (PDF):** [docs/Relatorio_LuzSegura_ACV.pdf](docs/Relatorio_LuzSegura_ACV.pdf)
 - **Vídeo pitch (YouTube):** [https://youtu.be/iFU_annSkL0](https://youtu.be/iFU_annSkL0) (2 min 19 s, narrado em
-  português; arquivo em [docs/video/luz_segura_motion.mp4](docs/video/luz_segura_motion.mp4); roteiro e créditos na
-  seção [Vídeo pitch](#vídeo-pitch))
+  português; arquivo em [docs/video/luz_segura_motion.mp4](docs/video/luz_segura_motion.mp4))
 - **Contrato da API com o MVP:** [docs/contrato_api.md](docs/contrato_api.md)
 
 ## Integrantes
@@ -98,43 +97,8 @@ próximos passos.
 
 ## Vídeo pitch
 
-**Assista no YouTube:** [https://youtu.be/iFU_annSkL0](https://youtu.be/iFU_annSkL0) (arquivo:
+[https://youtu.be/iFU_annSkL0](https://youtu.be/iFU_annSkL0) (2 min 19 s, narrado em português; arquivo em
 [docs/video/luz_segura_motion.mp4](docs/video/luz_segura_motion.mp4))
-
-2 min 19 s, 1920×1080, narrado em português. A solução funcionando, em animação: uma foto real de chamado analisada
-etapa por etapa, o vídeo noturno processado, o app, a API e os resultados medidos. Tudo o que aparece como resultado é
-saída real do sistema, e os números vêm de `results/`.
-
-| Tempo | Cena | Narração |
-|---|---|---|
-| 0:00–0:07 | Abertura | Luz Segura. Visão computacional para encontrar luminárias apagadas e trechos escuros. |
-| 0:07–0:19 | Problema | Luminária apagada é calçada escura, e pedestre mais exposto. E a prefeitura só fica sabendo quando alguém reclama: sem foto, sem local exato, sem prioridade. |
-| 0:19–0:28 | A ideia | O Luz Segura transforma a foto de um cidadão, ou o vídeo de uma ronda, em um diagnóstico explicável, pronto para virar chamado de manutenção. |
-| 0:28–0:37 | Foto real: privacidade | Vamos ver com uma foto real, de um chamado em San Francisco. Primeiro, o filtro de privacidade desfoca pessoas e veículos. |
-| 0:37–0:43 | Foto real: detector | Depois, o detector treinado pela equipe encontra as luminárias. Aqui, quatro apagadas. |
-| 0:43–0:52 | Foto real: regra de brilho | Uma regra de brilho confere cada uma. Três se confirmam; em uma, há um ponto de luz, e por isso o caso vai para revisão humana. |
-| 0:52–0:59 | Foto real: posição do Sol | Pelo horário e pelo local da foto, o Sol estava 45 graus abaixo do horizonte. Ou seja, é noite. |
-| 0:59–1:04 | Foto real: brilho do chão | O chão está iluminado, então o trecho não é escuro. |
-| 1:04–1:12 | Foto real: diagnóstico | Resultado: luminária apagada, prioridade média, com revisão humana. Tudo em um JSON que o MVP consome. |
-| 1:12–1:21 | Vídeo noturno | Em vídeo, o sistema analisa cada quadro, só com CPU, e conta cada luminária uma única vez. |
-| 1:21–1:30 | Trecho escuro | Nesta via, sem luminária acesa e com o chão escuro, ele marca trecho escuro em quase todo o trajeto. |
-| 1:30–1:37 | App | No app, o cidadão envia a foto e recebe a imagem anotada e o diagnóstico explicado. |
-| 1:37–1:43 | API | E a API entrega o mesmo resultado, em JSON, para o restante do MVP. |
-| 1:43–2:02 | Resultados | Em dados que o modelo nunca viu, 87,3% das luminárias apontadas como apagadas estavam mesmo com defeito, e o detector roda a 35 quadros por segundo, só com CPU. Muitas apagadas ainda escapam, e por isso os casos duvidosos vão para revisão humana. |
-| 2:02–2:10 | Privacidade | O sistema não guarda as fotos, desfoca pessoas e veículos, e manda para revisão humana os casos em que a evidência é fraca. |
-| 2:10–2:19 | Encerramento | Luz Segura: uma cidade mais iluminada e mais segura para quem anda a pé. Na tela, a equipe e os créditos. |
-
-### Créditos do vídeo
-
-Vídeos de terceiros (modificados: redimensionados, anotados e com pessoas e veículos detectados desfocados):
-
-- São Paulo, SP, Brasil: Ace of Spades / publicvideos.org, https://archive.org/details/sampa_night. Licença: Domínio público (CC0), https://creativecommons.org/publicdomain/zero/1.0/. Trechos: sao_paulo_00035 e sao_paulo_00024.
-
-Fotos e dados:
-
-- Foto de chamado: San Francisco 311 (DataSF), domínio público (ODC PDDL), https://data.sf.gov/resource/vw6y-z8j6. Modificada: anotada, com pessoas e veículos detectados desfocados.
-- Treino: Open Images V7 (Google), anotações CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) e fotos CC BY 2.0 de seus autores no Flickr (https://creativecommons.org/licenses/by/2.0/), https://storage.googleapis.com/openimages/web/index.html.
-- Teste: Comprehensive Dataset for Urban Streetlight Analysis (arXiv:2407.01117), https://github.com/Team16Project/Street-Light-Dataset (só nas métricas; nenhuma foto aparece no vídeo).
 
 ## Como rodar
 
@@ -237,7 +201,7 @@ Nenhuma foto ou vídeo foi feito pela equipe.
 | [YOLO26n](https://docs.ultralytics.com/models/yolo26/) (Ultralytics) | pesos iniciais e filtro de privacidade | AGPL-3.0 | não (baixado pelo Ultralytics) |
 
 Os créditos de cada foto mostrada no relatório estão em `results/exemplos/creditos.csv`, e os de cada trecho
-do vídeo, no próprio vídeo e na seção [Vídeo pitch](#vídeo-pitch).
+do vídeo, no próprio vídeo.
 
 ## Privacidade e uso responsável
 
