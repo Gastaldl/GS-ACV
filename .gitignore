@@ -23,11 +23,11 @@ yolov8*-world*.pt
 *.part
 
 # Mosaicos do Ultralytics (fotos de treino sem anonimização), argumentos com caminhos locais
-# e mosaicos de conferência (scripts/dados/mosaico_amostras.py)
+# e mosaicos de conferência
 results/**/*batch*.jpg
 results/**/args.yaml
 results/qa/
 
-# Vídeos gerados em docs/video: só o vídeo de demonstração final é versionado
+# Vídeos em docs/video: só o vídeo final da entrega é versionado
 docs/video/*.mp4
-!docs/video/luz_segura_demo.mp4
+!docs/video/luz_segura_motion.mp4

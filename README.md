@@ -8,8 +8,9 @@ Entrega de **Applied Computer Vision** ("Enxergando o mundo real") da FIAP Globa
 CitizenTech, Engenharia de Software 4º ano (4ES). Professores: Arnaldo Viana e Paulo Rodrigues.
 
 - **Relatório técnico (PDF):** [docs/Relatorio_LuzSegura_ACV.pdf](docs/Relatorio_LuzSegura_ACV.pdf)
-- **Vídeo de demonstração:** [docs/video/luz_segura_demo.mp4](docs/video/luz_segura_demo.mp4) (legendado; roteiro e
-  créditos em [docs/video/roteiro.md](docs/video/roteiro.md))
+- **Vídeo pitch (YouTube):** [https://youtu.be/iFU_annSkL0](https://youtu.be/iFU_annSkL0) (2 min 19 s, narrado em
+  português; arquivo em [docs/video/luz_segura_motion.mp4](docs/video/luz_segura_motion.mp4); roteiro e créditos na
+  seção [Vídeo pitch](#vídeo-pitch))
 - **Contrato da API com o MVP:** [docs/contrato_api.md](docs/contrato_api.md)
 
 ## Integrantes
@@ -95,10 +96,49 @@ cidadão. O diagnóstico acesa durante o dia é experimental: no treino, toda lu
 como apagada, e o modelo vê como apagada até a luminária acesa de dia. O relatório discute as causas e os
 próximos passos.
 
+## Vídeo pitch
+
+**Assista no YouTube:** [https://youtu.be/iFU_annSkL0](https://youtu.be/iFU_annSkL0) (arquivo:
+[docs/video/luz_segura_motion.mp4](docs/video/luz_segura_motion.mp4))
+
+2 min 19 s, 1920×1080, narrado em português. A solução funcionando, em animação: uma foto real de chamado analisada
+etapa por etapa, o vídeo noturno processado, o app, a API e os resultados medidos. Tudo o que aparece como resultado é
+saída real do sistema, e os números vêm de `results/`.
+
+| Tempo | Cena | Narração |
+|---|---|---|
+| 0:00–0:07 | Abertura | Luz Segura. Visão computacional para encontrar luminárias apagadas e trechos escuros. |
+| 0:07–0:19 | Problema | Luminária apagada é calçada escura, e pedestre mais exposto. E a prefeitura só fica sabendo quando alguém reclama: sem foto, sem local exato, sem prioridade. |
+| 0:19–0:28 | A ideia | O Luz Segura transforma a foto de um cidadão, ou o vídeo de uma ronda, em um diagnóstico explicável, pronto para virar chamado de manutenção. |
+| 0:28–0:37 | Foto real: privacidade | Vamos ver com uma foto real, de um chamado em San Francisco. Primeiro, o filtro de privacidade desfoca pessoas e veículos. |
+| 0:37–0:43 | Foto real: detector | Depois, o detector treinado pela equipe encontra as luminárias. Aqui, quatro apagadas. |
+| 0:43–0:52 | Foto real: regra de brilho | Uma regra de brilho confere cada uma. Três se confirmam; em uma, há um ponto de luz, e por isso o caso vai para revisão humana. |
+| 0:52–0:59 | Foto real: posição do Sol | Pelo horário e pelo local da foto, o Sol estava 45 graus abaixo do horizonte. Ou seja, é noite. |
+| 0:59–1:04 | Foto real: brilho do chão | O chão está iluminado, então o trecho não é escuro. |
+| 1:04–1:12 | Foto real: diagnóstico | Resultado: luminária apagada, prioridade média, com revisão humana. Tudo em um JSON que o MVP consome. |
+| 1:12–1:21 | Vídeo noturno | Em vídeo, o sistema analisa cada quadro, só com CPU, e conta cada luminária uma única vez. |
+| 1:21–1:30 | Trecho escuro | Nesta via, sem luminária acesa e com o chão escuro, ele marca trecho escuro em quase todo o trajeto. |
+| 1:30–1:37 | App | No app, o cidadão envia a foto e recebe a imagem anotada e o diagnóstico explicado. |
+| 1:37–1:43 | API | E a API entrega o mesmo resultado, em JSON, para o restante do MVP. |
+| 1:43–2:02 | Resultados | Em dados que o modelo nunca viu, 87,3% das luminárias apontadas como apagadas estavam mesmo com defeito, e o detector roda a 35 quadros por segundo, só com CPU. Muitas apagadas ainda escapam, e por isso os casos duvidosos vão para revisão humana. |
+| 2:02–2:10 | Privacidade | O sistema não guarda as fotos, desfoca pessoas e veículos, e manda para revisão humana os casos em que a evidência é fraca. |
+| 2:10–2:19 | Encerramento | Luz Segura: uma cidade mais iluminada e mais segura para quem anda a pé. Na tela, a equipe e os créditos. |
+
+### Créditos do vídeo
+
+Vídeos de terceiros (modificados: redimensionados, anotados e com pessoas e veículos detectados desfocados):
+
+- São Paulo, SP, Brasil: Ace of Spades / publicvideos.org, https://archive.org/details/sampa_night. Licença: Domínio público (CC0), https://creativecommons.org/publicdomain/zero/1.0/. Trechos: sao_paulo_00035 e sao_paulo_00024.
+
+Fotos e dados:
+
+- Foto de chamado: San Francisco 311 (DataSF), domínio público (ODC PDDL), https://data.sf.gov/resource/vw6y-z8j6. Modificada: anotada, com pessoas e veículos detectados desfocados.
+- Treino: Open Images V7 (Google), anotações CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) e fotos CC BY 2.0 de seus autores no Flickr (https://creativecommons.org/licenses/by/2.0/), https://storage.googleapis.com/openimages/web/index.html.
+- Teste: Comprehensive Dataset for Urban Streetlight Analysis (arXiv:2407.01117), https://github.com/Team16Project/Street-Light-Dataset (só nas métricas; nenhuma foto aparece no vídeo).
+
 ## Como rodar
 
-Requisitos: Python 3.12 (testado no 3.12.10), Windows 11 ou Linux, só CPU; Edge, Chrome ou Chromium só
-para gerar o PDF do relatório.
+Requisitos: Python 3.12 (testado no 3.12.10), Windows 11 ou Linux, só CPU.
 
 ```bash
 python -m venv .venv
@@ -152,7 +192,7 @@ aparecerem certos no terminal.
 ## Reproduzir do zero
 
 ```bash
-python scripts/reproduzir.py                 # dados, dataset, treino (cerca de 4 h em CPU), avaliação, demo e relatório
+python scripts/reproduzir.py                 # dados, dataset, treino (cerca de 4 h em CPU), avaliação e demo
 python scripts/reproduzir.py --pular-treino  # usa os pesos versionados em models/
 ```
 
@@ -165,8 +205,7 @@ python scripts/reproduzir.py --pular-treino  # usa os pesos versionados em model
 | v2 | pseudo-rótulos do v1 em fotos de chamados reais separadas da avaliação (o v2 só é treinado com `--com-v2`) | `montar_dataset_v2.py` |
 | comparar | escolhe o modelo final por regra fixada antes e publica os resultados dele | `comparar_modelos.py` |
 | benchmark | quadros por segundo em CPU (PyTorch e ONNX Runtime) | `benchmark_fps.py` |
-| demo | exemplos de fotos, vídeos anotados e o vídeo de demonstração | `scripts/demo/*.py` |
-| relatorio | relatório em HTML e PDF, com todos os números lidos de `results/` | `scripts/docs/gerar_relatorio.py` |
+| demo | exemplos de fotos anotados e anonimizados e os vídeos noturnos anotados | `scripts/demo/exemplos_fotos.py`, `processar_videos.py` |
 
 ## Estrutura
 
@@ -174,12 +213,12 @@ python scripts/reproduzir.py --pular-treino  # usa os pesos versionados em model
 src/luzsegura/        pacote: detector, regra de brilho, período solar, diagnóstico, privacidade,
                       desenho, vídeo, API (FastAPI), app (Gradio) e linha de comando
 tests/                testes automatizados (pytest)
-scripts/              dados, treino, avaliação, demonstração, relatório e reproduzir.py
+scripts/              dados, treino, avaliação, demonstração e reproduzir.py
 models/               pesos treinados (.pt e .onnx com o selo SHA-256 do .pt)
 data/manifests/       manifestos versionados: origem de cada imagem e vídeo e rótulos das imagens; autor
                       e licença por foto (Open Images) e por vídeo
 results/              métricas, gráficos, exemplos anonimizados e resumos dos vídeos
-docs/                 relatório (PDF e HTML), contrato da API, vídeo de demonstração e roteiro do vídeo
+docs/                 relatório em PDF, contrato da API e o vídeo pitch
 ```
 
 `data/raw`, `data/dataset` e os demais intermediários não são versionados: saem dos scripts.
@@ -193,12 +232,12 @@ Nenhuma foto ou vídeo foi feito pela equipe.
 | [Open Images V7](https://storage.googleapis.com/openimages/web/index.html), classe "Street light" | treino, validação e teste do detector | anotações CC BY 4.0 (Google); fotos CC BY 2.0 de cada autor | manifestos (`openimages_*.csv`, com autor e link de cada foto); das fotos, só as de exemplo, anotadas e anonimizadas, em `results/exemplos/`, com crédito em `creditos.csv` |
 | Noites simuladas | treino de luminárias apagadas à noite | derivadas de fotos diurnas do Open Images | não (geradas pelos scripts) |
 | [Dataset de Chennai](https://github.com/Team16Project/Street-Light-Dataset) (arXiv:2407.01117) | só avaliação (luminárias funcionando e com defeito) | sem licença declarada | só os links (`chennai_imagens.csv`); as imagens nunca são redistribuídas |
-| [San Francisco 311](https://data.sf.gov/resource/vw6y-z8j6) (DataSF) | avaliação com chamados reais; conjunto separado para a tentativa de autotreinamento | ODC PDDL (domínio público) | manifestos (`sf311*.csv`); fotos só anonimizadas, nos exemplos e no vídeo de demonstração |
-| Vídeos noturnos do Internet Archive (Avenida Paulista, São Paulo) | demonstração da análise de vídeo | domínio público (CC0) | manifesto (`videos.csv`); trechos anotados no vídeo de demonstração |
+| [San Francisco 311](https://data.sf.gov/resource/vw6y-z8j6) (DataSF) | avaliação com chamados reais; conjunto separado para a tentativa de autotreinamento | ODC PDDL (domínio público) | manifestos (`sf311*.csv`); fotos só anonimizadas, nos exemplos e no vídeo pitch |
+| Vídeos noturnos do Internet Archive (Avenida Paulista, São Paulo) | demonstração da análise de vídeo | domínio público (CC0) | manifesto (`videos.csv`); trechos anotados no vídeo pitch |
 | [YOLO26n](https://docs.ultralytics.com/models/yolo26/) (Ultralytics) | pesos iniciais e filtro de privacidade | AGPL-3.0 | não (baixado pelo Ultralytics) |
 
 Os créditos de cada foto mostrada no relatório estão em `results/exemplos/creditos.csv`, e os de cada trecho
-do vídeo, no próprio vídeo e em `docs/video/roteiro.md`.
+do vídeo, no próprio vídeo e na seção [Vídeo pitch](#vídeo-pitch).
 
 ## Privacidade e uso responsável
 

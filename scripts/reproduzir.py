@@ -1,10 +1,10 @@
 """Reproduz o componente de visão do Luz Segura do zero, na ordem certa.
 
   python scripts/reproduzir.py                  # tudo: dados, treino do v1 (cerca de 4 h em CPU), pseudo-rótulos
-                                                # do v2, avaliação, escolha do modelo, demo e relatório
+                                                # do v2, avaliação, escolha do modelo e demo
   python scripts/reproduzir.py --pular-treino   # usa os pesos versionados (models/luzsegura_yolo26n_v1.pt)
   python scripts/reproduzir.py --com-v2         # também treina e avalia o v2 (autotreinamento, mais cerca de 2 h)
-  python scripts/reproduzir.py --pular-treino --etapas avaliacao_v1 comparar benchmark demo relatorio
+  python scripts/reproduzir.py --pular-treino --etapas avaliacao_v1 comparar benchmark demo
 
 Etapas (sempre nesta ordem, mesmo que --etapas as liste em outra):
   dados         downloads (refazem exatamente as linhas dos manifestos versionados), remoção de fotos
@@ -18,8 +18,7 @@ Etapas (sempre nesta ordem, mesmo que --etapas as liste em outra):
   comparar      escolhe v1 ou v2 pela regra fixada antes (scripts/avaliacao/comparar_modelos.py), copia os
                 pesos escolhidos para models/luzsegura_yolo26n.pt e publica os resultados deles sem sufixo
   benchmark     velocidade em CPU dos pesos escolhidos
-  demo          exemplos de fotos, vídeos anotados e vídeo de demonstração
-  relatorio     relatório em PDF
+  demo          exemplos de fotos e vídeos anotados
 
 --pular-treino pula os treinos e o que só serve a eles (pool de treino e dataset v2); as avaliações usam
 os pesos versionados em models/. Sem treino, a divisão do dataset precisa sair igual à versionada
@@ -83,10 +82,6 @@ ETAPAS = {
     "demo": [
         (["scripts/demo/exemplos_fotos.py"], ()),
         (["scripts/demo/processar_videos.py"], ()),
-        (["scripts/demo/gerar_video_demo.py"], ()),
-    ],
-    "relatorio": [
-        (["scripts/docs/gerar_relatorio.py"], ()),
     ],
 }
 # Pesos que cada etapa precisa encontrar antes de começar, e a etapa que os grava (com --pular-treino,
